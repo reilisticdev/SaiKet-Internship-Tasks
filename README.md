@@ -5,7 +5,7 @@
 **Company:** SaiKet Systems
 
 ## 📖 About This Repository
-This repository documents my work and technical submissions for the C/C++ Development Internship at SaiKet Systems. Each folder corresponds to a specific task assigned during the program, showcasing solutions built from scratch using C++ and standard industry practices.
+This repository documents my work and technical submissions for the C/C++ Development Internship at SaiKet Systems. I have successfully completed the required 4 tasks, showcasing solutions built from scratch using C++ and standard industry practices.
 
 ---
 
@@ -47,22 +47,37 @@ A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. 
 **Key Features:**
 * **File Persistence:** Uses `std::ofstream` (write) and `std::ifstream` (read) to save data permanently to the disk.
 * **Continuous Input Mode:** Allows users to write multiple lines of text until a specific save command (`:SAVE`) is triggered.
-* **File Safety:** Includes checks to ensure files open correctly and handles errors if a file is missing.
 * **Buffer Management:** Implements input clearing to handle the transition between menu selection and text entry smoothly.
 
 ---
 
-### 🚧 Task 4: Tic-Tac-Toe Game
-**Status:** Pending  
-*Description will be updated upon completion.*
+### ✅ Task 4: Tic-Tac-Toe Game
+**Status:** Completed  
+**Location:** `/Task 4`
+
+A classic two-player console game that demonstrates complex **Game Logic** and **State Management**.
+
+**Key Features:**
+* **Visual Grid System:** Uses `system("cls")` to redraw the board after every move, creating a clean, frame-like experience instead of a scrolling log.
+* **Win/Draw Detection:** Instantaneously checks rows, columns, and diagonals for a win condition after every turn.
+* **Input Protection:** Prevents users from crashing the game by entering letters or selecting occupied slots.
+* **2D Array Logic:** efficient management of the 3x3 game board using multi-dimensional arrays.
+
+---
+
+### 🔹 Task 5: Inventory System
+**Status:** Optional (Requirement Met)
+
+### 🔹 Task 6: Address Book
+**Status:** Optional (Requirement Met)
 
 ---
 
 ## 🛠️ Tech Stack & Tools
 * **Language:** C++ (C++20 Standard)
 * **IDE:** Visual Studio 2026
-* **Frameworks:** Win32 API (Task 1), C++ Standard Library (Task 2 & 3)
-* **Concepts:** File I/O, Event Handling, Data Structures (Vectors), GUI Programming.
+* **Frameworks:** Win32 API (Task 1), C++ Standard Library (Tasks 2-4)
+* **Key Concepts:** Event Handling, File I/O, Data Structures (Vectors), Game Logic, 2D Arrays.
 
 ## 🚀 How to Run The Projects
 
@@ -71,7 +86,7 @@ A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. 
 2. Set the Linker System to **Windows** (`/SUBSYSTEM:WINDOWS`).
 3. Build and Run.
 
-**To Run Task 2 & 3 (Console Apps):**
+**To Run Tasks 2, 3, & 4 (Console Apps):**
 1. Open the project in Visual Studio.
 2. Set the Linker System to **Console** (`/SUBSYSTEM:CONSOLE`).
 3. Build and Run.
