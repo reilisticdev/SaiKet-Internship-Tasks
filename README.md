@@ -65,8 +65,17 @@ A classic two-player console game that demonstrates complex **Game Logic** and *
 
 ---
 
-### 🔹 Task 5: Inventory System
-**Status:** Optional (Requirement Met)
+### ✅ Task 5: Inventory System (Advanced)
+**Status:** Completed  
+**Location:** `/Task 5`
+
+A professional inventory management tool that calculates stock value and formats reports using `iomanip`.
+
+**Key Features:**
+* **Formatted Reporting:** Uses `std::setw` and `std::left` to generate perfectly aligned, receipt-style tables in the console.
+* **Financial Logic:** Automatically calculates total asset value (Quantity × Price) for individual items and the entire stock.
+* **Smart Updates:** Allows targeted modification of specific item attributes (Price or Quantity) without needing to re-enter all data.
+* **Auto-Incrementing IDs:** Simulates a real database by assigning unique tracking numbers to every new product.
 
 ### 🔹 Task 6: Address Book
 **Status:** Optional (Requirement Met)
