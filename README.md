@@ -67,4 +67,4 @@ Unlike standard solutions that rely on heavy external frameworks (like Qt or wxW
 5.  Build and Run (F5).
 
 ---
-*Internship work submitted by [Your Name].*
+*Internship work submitted by Reilyn Kevin Naidoo.*
