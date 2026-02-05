@@ -5,7 +5,7 @@
 **Company:** SaiKet Systems
 
 ## 📖 About This Repository
-This repository documents my work and technical submissions for the C/C++ Development Internship at SaiKet Systems. I have successfully completed the required 4 tasks, showcasing solutions built from scratch using C++ and standard industry practices.
+This repository documents my work and technical submissions for the C/C++ Development Internship at SaiKet Systems. I have successfully completed **all 6 assigned tasks** (exceeding the requirement of 4), showcasing solutions built from scratch using C++ and standard industry practices.
 
 ---
 
@@ -29,10 +29,10 @@ A fully functional Graphical User Interface (GUI) calculator built entirely in *
 **Status:** Completed  
 **Location:** `/Task 2`
 
-A robust console-based task management system designed to demonstrate proficiency in **C++ Data Structures** and **Memory Management**. It allows users to manage their daily tasks efficiently through a text-based interface.
+A robust console-based task management system designed to demonstrate proficiency in **C++ Data Structures** and **Memory Management**.
 
 **Key Features:**
-* **Dynamic Storage:** Uses `std::vector` and `struct` to manage a dynamic list of tasks.
+* **Dynamic Storage:** Uses `std::vector` to manage a dynamic list of tasks.
 * **CRUD Operations:** Users can **Create** (Add), **Read** (View), **Update** (Mark Complete), and **Delete** (Remove) tasks.
 * **Input Validation:** Robust error handling to prevent crashes when users enter invalid numbers.
 
@@ -47,7 +47,6 @@ A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. 
 **Key Features:**
 * **File Persistence:** Uses `std::ofstream` (write) and `std::ifstream` (read) to save data permanently to the disk.
 * **Continuous Input Mode:** Allows users to write multiple lines of text until a specific save command (`:SAVE`) is triggered.
-* **Buffer Management:** Implements input clearing to handle the transition between menu selection and text entry smoothly.
 
 ---
 
@@ -58,10 +57,9 @@ A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. 
 A classic two-player console game that demonstrates complex **Game Logic** and **State Management**.
 
 **Key Features:**
-* **Visual Grid System:** Uses `system("cls")` to redraw the board after every move, creating a clean, frame-like experience instead of a scrolling log.
-* **Win/Draw Detection:** Instantaneously checks rows, columns, and diagonals for a win condition after every turn.
-* **Input Protection:** Prevents users from crashing the game by entering letters or selecting occupied slots.
-* **2D Array Logic:** efficient management of the 3x3 game board using multi-dimensional arrays.
+* **Visual Grid System:** Uses `system("cls")` to redraw the board after every move.
+* **Win/Draw Detection:** Instantaneously checks rows, columns, and diagonals for a win condition.
+* **Input Protection:** Prevents users from crashing the game by selecting occupied slots.
 
 ---
 
@@ -69,24 +67,33 @@ A classic two-player console game that demonstrates complex **Game Logic** and *
 **Status:** Completed  
 **Location:** `/Task 5`
 
-A professional inventory management tool that calculates stock value and formats reports using `iomanip`.
+A professional inventory management tool that calculates stock value and formats reports.
 
 **Key Features:**
-* **Formatted Reporting:** Uses `std::setw` and `std::left` to generate perfectly aligned, receipt-style tables in the console.
-* **Financial Logic:** Automatically calculates total asset value (Quantity × Price) for individual items and the entire stock.
-* **Smart Updates:** Allows targeted modification of specific item attributes (Price or Quantity) without needing to re-enter all data.
-* **Auto-Incrementing IDs:** Simulates a real database by assigning unique tracking numbers to every new product.
+* **Formatted Reporting:** Uses `iomanip` to generate aligned, receipt-style tables.
+* **Financial Logic:** Automatically calculates total asset value (Quantity × Price).
+* **Smart Updates:** Allows targeted modification of specific item attributes.
 
-### 🔹 Task 6: Address Book
-**Status:** Optional (Requirement Met)
+---
+
+### ✅ Task 6: Command-Line Address Book
+**Status:** Completed  
+**Location:** `/Task 6`
+
+The final capstone project: a comprehensive Contact Management System.
+
+**Key Features:**
+* **Smart Search:** Implements a substring search algorithm (e.g., searching "Dave" finds "David").
+* **Full Editing Suite:** Allows users to edit specific fields (Name, Phone, or Email) without deleting the contact.
+* **Tabular View:** Displays contacts in a clean, professional grid layout.
 
 ---
 
 ## 🛠️ Tech Stack & Tools
 * **Language:** C++ (C++20 Standard)
 * **IDE:** Visual Studio 2026
-* **Frameworks:** Win32 API (Task 1), C++ Standard Library (Tasks 2-4)
-* **Key Concepts:** Event Handling, File I/O, Data Structures (Vectors), Game Logic, 2D Arrays.
+* **Frameworks:** Win32 API (Task 1), C++ Standard Library (Tasks 2-6)
+* **Concepts:** Event Handling, File I/O, Vectors, Game Logic, Search Algorithms.
 
 ## 🚀 How to Run The Projects
 
@@ -95,7 +102,7 @@ A professional inventory management tool that calculates stock value and formats
 2. Set the Linker System to **Windows** (`/SUBSYSTEM:WINDOWS`).
 3. Build and Run.
 
-**To Run Tasks 2, 3, & 4 (Console Apps):**
+**To Run Tasks 2-6 (Console Apps):**
 1. Open the project in Visual Studio.
 2. Set the Linker System to **Console** (`/SUBSYSTEM:CONSOLE`).
 3. Build and Run.
