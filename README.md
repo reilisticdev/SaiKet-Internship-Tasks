@@ -15,37 +15,37 @@ This repository documents my work and technical submissions for the C/C++ Develo
 **Status:** Completed  
 **Location:** `/Task 1`
 
-A fully functional Graphical User Interface (GUI) calculator built entirely in **C++ using the native Win32 API**. 
-
-Unlike standard solutions that rely on heavy external frameworks (like Qt or wxWidgets), this application interacts directly with the Windows OS. This approach demonstrates a deep understanding of memory management, event loops, and system-level programming.
+A fully functional Graphical User Interface (GUI) calculator built entirely in **C++ using the native Win32 API**. Unlike standard solutions that rely on heavy external frameworks, this application interacts directly with the Windows OS.
 
 **Key Features:**
 * **Native Performance:** Built with pure C++ and `windows.h` for zero dependency overhead.
-* **Arithmetic Engine:** Handles Addition, Subtraction, Multiplication, and Division with error handling (e.g., division by zero).
-* **Modern UI:** Implements `Segoe UI` fonts via `WM_SETFONT` for a clean look, overriding the default system fonts.
-* **Keyboard Support:** Users can input numbers and operations using the Numpad or keyboard keys (handling `WM_CHAR` events).
-* **Input Validation:** Prevents syntax errors like multiple decimal points.
-
-**Technical Highlights:**
-* Manual handling of the Windows Message Loop (`GetMessage`, `DispatchMessage`).
-* Custom `WindowProc` callback function for event processing.
-* Dynamic memory & resource management (GDI Objects).
+* **Event-Driven Architecture:** Manages the Windows Message Loop manually.
+* **Modern UI:** Implements `Segoe UI` fonts via `WM_SETFONT`.
+* **Input Handling:** Supports both mouse clicks and keyboard input (Numpad support).
 
 ---
 
-### 🚧 Task 2: [Coming Soon]
-**Status:** In Progress  
-*Description will be updated upon completion.*
+### ✅ Task 2: To-Do List Application (Console)
+**Status:** Completed  
+**Location:** `/Task 2`
+
+A robust console-based task management system designed to demonstrate proficiency in **C++ Data Structures** and **Memory Management**. It allows users to manage their daily tasks efficiently through a text-based interface.
+
+**Key Features:**
+* [cite_start]**Dynamic Storage:** Uses `std::vector` and `struct` to manage a dynamic list of tasks that grows and shrinks at runtime[cite: 52].
+* [cite_start]**CRUD Operations:** Users can **Create** (Add), **Read** (View), **Update** (Mark Complete), and **Delete** (Remove) tasks[cite: 46, 47].
+* [cite_start]**Input Validation:** robust error handling to prevent crashes when users enter invalid numbers or text[cite: 54].
+* **Clean UI:** Implements specific buffer clearing functions (`cin.ignore`) to ensure a smooth user experience without "skipping" inputs.
 
 ---
 
-### 🚧 Task 3: [Coming Soon]
+### 🚧 Task 3: Simple Text Editor
 **Status:** Pending  
 *Description will be updated upon completion.*
 
 ---
 
-### 🚧 Task 4: [Coming Soon]
+### 🚧 Task 4: Tic-Tac-Toe Game
 **Status:** Pending  
 *Description will be updated upon completion.*
 
@@ -53,18 +53,21 @@ Unlike standard solutions that rely on heavy external frameworks (like Qt or wxW
 
 ## 🛠️ Tech Stack & Tools
 * **Language:** C++ (C++20 Standard)
-* **IDE:** Visual Studio 2026 (Enterprise/Community)
-* **Frameworks:** Win32 API (Windows.h)
-* **Version Control:** Git & GitHub
+* **IDE:** Visual Studio 2026
+* **Frameworks:** Win32 API (Task 1), C++ Standard Library (Task 2)
+* **Concepts:** Event Handling, Data Structures (Vectors), GUI Programming, Input Validation
 
-## 🚀 How to Run Task 1
-1.  Clone this repository.
-2.  Open **Visual Studio** and create a new **Empty Project (C++)**.
-3.  Copy the code from `Task 1/Main.cpp` into your project source file.
-4.  **Important Configuration:**
-    * Right-click Project > Properties > **Linker** > **System**.
-    * Set **SubSystem** to `Windows (/SUBSYSTEM:WINDOWS)`.
-5.  Build and Run (F5).
+## 🚀 How to Run The Projects
+
+**To Run Task 1 (Calculator):**
+1. Open the project in Visual Studio.
+2. Set the Linker System to **Windows** (`/SUBSYSTEM:WINDOWS`).
+3. Build and Run.
+
+**To Run Task 2 (To-Do List):**
+1. Open the project in Visual Studio.
+2. Set the Linker System to **Console** (`/SUBSYSTEM:CONSOLE`).
+3. Build and Run.
 
 ---
 *Internship work submitted by Reilyn Kevin Naidoo.*
