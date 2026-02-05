@@ -1,119 +1,105 @@
 #include <iostream>
-#include <vector>
+#include <fstream>  // REQUIRED for File I/O
 #include <string>
-#include <limits> // For clearing input buffer
+#include <vector>
+#include <limits> // For input clearing
 
 using namespace std;
 
-// 1. Define the structure of a Task
-struct Task {
-    string description;
-    bool isCompleted;
-};
-
-// 2. Global List of Tasks
-vector<Task> taskList;
-
-// 3. Helper Function to handle input glitches
+// --- Helper Functions ---
 void clearInput() {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
-// --- FEATURE FUNCTIONS ---
+// --- FILE OPERATIONS ---
 
-void addTask() {
-    cout << "\n--- Add New Task ---" << endl;
-    cout << "Enter task description: ";
+// 1. Write Mode (Create New File)
+void createDocument() {
+    string filename;
+    cout << "\n[CREATE NEW DOCUMENT]" << endl;
+    cout << "Enter filename (e.g., mynote.txt): ";
+    cin >> filename;
 
-    Task newTask;
-    cin.ignore(); // Clear buffer before getline
-    getline(cin, newTask.description);
-    newTask.isCompleted = false;
+    // Add .txt if missing
+    if (filename.find(".txt") == string::npos) filename += ".txt";
 
-    taskList.push_back(newTask);
-    cout << "Task added successfully!" << endl;
-}
+    ofstream outFile(filename); // 'ofstream' is for WRITING to files
 
-void viewTasks() {
-    cout << "\n--- Your To-Do List ---" << endl;
-    if (taskList.empty()) {
-        cout << "List is empty." << endl;
+    if (!outFile) {
+        cout << "Error: Could not create file!" << endl;
         return;
     }
 
-    for (int i = 0; i < taskList.size(); i++) {
-        string status = taskList[i].isCompleted ? "[DONE]" : "[PENDING]";
-        cout << i + 1 << ". " << status << " " << taskList[i].description << endl;
+    cout << "\n--- EDITOR MODE (Type ':SAVE' to finish) ---" << endl;
+
+    string line;
+    cin.ignore(); // Clear buffer to catch the first line
+    while (true) {
+        getline(cin, line);
+        if (line == ":SAVE") break; // Exit condition
+        outFile << line << endl;    // Write line to file on hard drive
     }
+
+    outFile.close(); // ALWAYS close files to save changes!
+    cout << ">> Success! File saved as '" << filename << "'\n" << endl;
 }
 
-void markCompleted() {
-    viewTasks();
-    if (taskList.empty()) return;
+// 2. Read Mode (Open File)
+void openDocument() {
+    string filename;
+    cout << "\n[OPEN DOCUMENT]" << endl;
+    cout << "Enter filename to open: ";
+    cin >> filename;
 
-    cout << "\nEnter task number to mark as done: ";
-    int index;
-    cin >> index;
+    // Add .txt if missing
+    if (filename.find(".txt") == string::npos) filename += ".txt";
 
-    if (cin.fail() || index < 1 || index > taskList.size()) {
-        cout << "Invalid task number!" << endl;
-        clearInput();
+    ifstream inFile(filename); // 'ifstream' is for READING files
+
+    if (!inFile) {
+        cout << "Error: File not found! (Check your spelling)" << endl;
+        return;
     }
-    else {
-        taskList[index - 1].isCompleted = true;
-        cout << "Great job! Task marked as completed." << endl;
-    }
-}
 
-void removeTask() {
-    viewTasks();
-    if (taskList.empty()) return;
+    cout << "\n--- READING FILE: " << filename << " ---" << endl;
+    cout << "----------------------------------------" << endl;
 
-    cout << "\nEnter task number to remove: ";
-    int index;
-    cin >> index;
+    string line;
+    while (getline(inFile, line)) { // Read line by line until end
+        cout << line << endl;
+    }
 
-    if (cin.fail() || index < 1 || index > taskList.size()) {
-        cout << "Invalid task number!" << endl;
-        clearInput();
-    }
-    else {
-        cout << "Removed task: " << taskList[index - 1].description << endl;
-        taskList.erase(taskList.begin() + (index - 1));
-    }
+    cout << "----------------------------------------" << endl;
+    inFile.close();
+    cout << ">> End of file.\n" << endl;
 }
 
 // --- MAIN MENU ---
 
 int main() {
     int choice = 0;
-
-    while (choice != 5) {
-        cout << "\n=========================" << endl;
-        cout << "   TO-DO LIST MANAGER" << endl;
-        cout << "=========================" << endl;
-        cout << "1. Add Task" << endl;
-        cout << "2. View Tasks" << endl;
-        cout << "3. Mark Task as Completed" << endl;
-        cout << "4. Remove Task" << endl;
-        cout << "5. Exit" << endl;
+    while (choice != 3) {
+        cout << "===========================" << endl;
+        cout << "   SAIKET TEXT EDITOR v1" << endl;
+        cout << "===========================" << endl;
+        cout << "1. Create New Document" << endl;
+        cout << "2. Open Existing Document" << endl;
+        cout << "3. Exit" << endl;
         cout << "Enter choice: ";
         cin >> choice;
 
         if (cin.fail()) {
-            cout << "Please enter a number." << endl;
+            cout << "Invalid input." << endl;
             clearInput();
             continue;
         }
 
         switch (choice) {
-        case 1: addTask(); break;
-        case 2: viewTasks(); break;
-        case 3: markCompleted(); break;
-        case 4: removeTask(); break;
-        case 5: cout << "Exiting... Have a productive day!" << endl; break;
-        default: cout << "Invalid choice. Try again." << endl;
+        case 1: createDocument(); break;
+        case 2: openDocument(); break;
+        case 3: cout << "Exiting..." << endl; break;
+        default: cout << "Invalid option!" << endl;
         }
     }
     return 0;
