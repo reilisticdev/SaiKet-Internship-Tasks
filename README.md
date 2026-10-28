@@ -1,6 +1,6 @@
 # SaiKet Systems - C/C++ Development Internship 🚀
 
-**Internship Period:** January 2026 - Present  
+**Internship Period:** February 2026 - March 2026  
 **Role:** C/C++ Software Development Intern (Remote)  
 **Company:** SaiKet Systems
 
