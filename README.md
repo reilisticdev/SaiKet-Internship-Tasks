@@ -13,7 +13,7 @@ This repository documents my work and technical submissions for the C/C++ Develo
 
 ### ✅ Task 1: GUI Calculator (Native Windows API)
 **Status:** Completed  
-**Location:** `/Task 1`
+**Location:** [`/Task 1 - Calculator`](./Task%201%20-%20Calculator)
 
 A fully functional Graphical User Interface (GUI) calculator built entirely in **C++ using the native Win32 API**. Unlike standard solutions that rely on heavy external frameworks, this application interacts directly with the Windows OS.
 
@@ -27,7 +27,7 @@ A fully functional Graphical User Interface (GUI) calculator built entirely in *
 
 ### ✅ Task 2: To-Do List Application (Console)
 **Status:** Completed  
-**Location:** `/Task 2`
+**Location:** [`/Task 2 - To-Do List`](./Task%202%20-%20To-Do%20List)
 
 A robust console-based task management system designed to demonstrate proficiency in **C++ Data Structures** and **Memory Management**.
 
@@ -40,7 +40,7 @@ A robust console-based task management system designed to demonstrate proficienc
 
 ### ✅ Task 3: Simple Text Editor (File I/O)
 **Status:** Completed  
-**Location:** `/Task 3`
+**Location:** [`/Task 3 - Text Editor`](./Task%203%20-%20Text%20Editor)
 
 A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. This program interacts directly with the hard drive to create, save, and read real text files.
 
@@ -52,7 +52,7 @@ A persistent "Mini-Notepad" that demonstrates **File Input/Output** operations. 
 
 ### ✅ Task 4: Tic-Tac-Toe Game
 **Status:** Completed  
-**Location:** `/Task 4`
+**Location:** [`/Task 4 - Tic-Tac-Toe`](./Task%204%20-%20Tic-Tac-Toe)
 
 A classic two-player console game that demonstrates complex **Game Logic** and **State Management**.
 
@@ -65,7 +65,7 @@ A classic two-player console game that demonstrates complex **Game Logic** and *
 
 ### ✅ Task 5: Inventory System (Advanced)
 **Status:** Completed  
-**Location:** `/Task 5`
+**Location:** [`/Task 5 - Inventory System`](./Task%205%20-%20Inventory%20System)
 
 A professional inventory management tool that calculates stock value and formats reports.
 
@@ -78,7 +78,7 @@ A professional inventory management tool that calculates stock value and formats
 
 ### ✅ Task 6: Command-Line Address Book
 **Status:** Completed  
-**Location:** `/Task 6`
+**Location:** [`/Task 6 - Address Book`](./Task%206%20-%20Address%20Book)
 
 The final capstone project: a comprehensive Contact Management System.
 
